@@ -2,126 +2,125 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin:0;
-    padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /* Navbar Button onHover animation   */
 
 .invisibleDiv {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    overflow: hidden;
-    z-index: 1;
-    color: black; /* Default text color */
-    padding: 10px 15px; /* Add padding for better click targets */
-    font-weight: bold;
-    text-align: center;
-    transition: color 0.3s ease-in-out;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  color: black; /* Default text color */
+  padding: 10px 15px; /* Add padding for better click targets */
+  font-weight: bold;
+  text-align: center;
+  transition: color 0.3s ease-in-out;
 }
 
 .invisibleDiv:hover {
-    color: white; /* Change text color on hover */
+  color: white; /* Change text color on hover */
 }
 
 .invisibleDiv::after {
-    content: '';
-    position: absolute;
-    top: -100%; /* Start completely outside of view */
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #323e6b;
-    z-index: -1; /* Ensures the background is behind the text */
-    transition: top 0.3s ease-in-out; /* Smooth animation for hover effect */
-    border-radius: 10px; /* Rounded corners for a more modern look */
+  content: "";
+  position: absolute;
+  top: -100%; /* Start completely outside of view */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #323e6b;
+  z-index: -1; /* Ensures the background is behind the text */
+  transition: top 0.3s ease-in-out; /* Smooth animation for hover effect */
+  border-radius: 10px; /* Rounded corners for a more modern look */
 }
 
 .invisibleDiv:hover::after {
-    top: 0; /* Slide down into view */
+  top: 0; /* Slide down into view */
 }
 
 @keyframes hoverNavButtonAnimation {
-    0% {
-        top: -100%;
-    }
-    100% {
-        top: 0;
-    }
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
 }
 
 .invisibleDiv:hover::after {
-    animation: hoverNavButtonAnimation 0.3s ease-in-out forwards;
+  animation: hoverNavButtonAnimation 0.3s ease-in-out forwards;
 }
-
 
 /* center button on mobile screen   start */
 .btn-shine {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    padding: 12px 48px;
-    color: #323e6b;
-    background: linear-gradient(to right, #f4f4f4 0, #766ce2 10%, #3957c4 20%);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 12px 48px;
+  color: #323e6b;
+  background: linear-gradient(to right, #f4f4f4 0, #766ce2 10%, #3957c4 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+}
+@-moz-keyframes shine {
+  0% {
     background-position: 0;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shine 3s infinite linear;
-    animation-fill-mode: forwards;
-    -webkit-text-size-adjust: none;
-    font-weight: 600;
-    font-size: 16px;
-    text-decoration: none;
-    white-space: nowrap;
-    font-family: "Poppins", sans-serif;
   }
-  @-moz-keyframes shine {
-    0% {
-      background-position: 0;
-    }
-    60% {
-      background-position: 180px;
-    }
-    100% {
-      background-position: 180px;
-    }
+  60% {
+    background-position: 180px;
   }
-  @-webkit-keyframes shine {
-    0% {
-      background-position: 0;
-    }
-    60% {
-      background-position: 180px;
-    }
-    100% {
-      background-position: 180px;
-    }
+  100% {
+    background-position: 180px;
   }
-  @-o-keyframes shine {
-    0% {
-      background-position: 0;
-    }
-    60% {
-      background-position: 180px;
-    }
-    100% {
-      background-position: 180px;
-    }
+}
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0;
   }
-  @keyframes shine {
-    0% {
-      background-position: 0;
-    }
-    60% {
-      background-position: 180px;
-    }
-    100% {
-      background-position: 180px;
-    }
+  60% {
+    background-position: 180px;
   }
+  100% {
+    background-position: 180px;
+  }
+}
+@-o-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
 
-  /* center Navbar  button on movile screen end  */
+/* center Navbar  button on movile screen end  */
 
 /* Hero Text Shine   */
 .btn-shine_2 {
@@ -130,7 +129,7 @@
   color: #ffffff;
   text-align: center;
   position: relative;
-  background: linear-gradient(90deg, #21BFCE, #03298B);
+  background: linear-gradient(90deg, #21bfce, #03298b);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent; /* Ensures the gradient is visible in the text */
@@ -151,10 +150,12 @@
 
 @keyframes glowingText {
   0% {
-    text-shadow: 0 0 5px #21BFCE, 0 0 10px #21BFCE, 0 0 20px #03298B, 0 0 30px #03298B;
+    text-shadow: 0 0 5px #21bfce, 0 0 10px #21bfce, 0 0 20px #03298b,
+      0 0 30px #03298b;
   }
   100% {
-    text-shadow: 0 0 10px #21BFCE, 0 0 20px #03298B, 0 0 40px #03298B, 0 0 50px #03298B;
+    text-shadow: 0 0 10px #21bfce, 0 0 20px #03298b, 0 0 40px #03298b,
+      0 0 50px #03298b;
   }
 }
 
@@ -167,7 +168,6 @@
   }
 }
 
-
 /* Carousel Scrollbar hide  */
 .scrollbar-hide {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -175,4 +175,8 @@
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* WebKit */
+}
+
+.backgroundImage {
+  background-image: url("https://www.jobringer.com/images/city-job-bg.jpg");
 }
