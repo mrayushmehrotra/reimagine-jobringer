@@ -41,24 +41,25 @@ const Navbar = () => {
           </div>
 
           {/* Bottom Icons */}
-          <div className="absolute w-full h-16 text-3xl bottom-0 p-4 flex justify-around border-t border-gray-300 bg-white">
-            <div className="flex flex-col items-center">
-              <IoMdPersonAdd style={{scale : "2"}}  />
-              <p className="text-sm">Login</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <FaHome style={{scale : "2"}}  />
-              <p className="text-sm">Home</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <PiBagSimpleFill style={{scale : "2"}}  />
-              <p className="text-sm">Jobs</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <IoReturnUpBack style={{scale : "2"}}  />
-              <p className="text-sm">Back</p>
-            </div>
-          </div>
+          <div className="sticky bottom-0 w-full h-16 text-3xl p-4 flex justify-around border-t border-gray-300 bg-white z-50">
+  <div className="flex flex-col items-center">
+    <IoMdPersonAdd style={{ scale: "2" }} />
+    <p className="text-sm">Login</p>
+  </div>
+  <div className="flex flex-col items-center">
+    <FaHome style={{ scale: "2" }} />
+    <p className="text-sm">Home</p>
+  </div>
+  <div className="flex flex-col items-center">
+    <PiBagSimpleFill style={{ scale: "2" }} />
+    <p className="text-sm">Jobs</p>
+  </div>
+  <div className="flex flex-col items-center">
+    <IoReturnUpBack style={{ scale: "2" }} />
+    <p className="text-sm">Back</p>
+  </div>
+</div>
+
         </>
       ) : (
         // Desktop View: Render Full Navbar
@@ -75,10 +76,10 @@ const Navbar = () => {
 
           {/* Nav Links */}
           <ul className="flex list-none gap-x-8 font-semibold">
-            <li className="invisibleDiv">Jobs</li>
-          <li className="invisibleDiv">Active employees</li>
-            <li className="invisibleDiv">Job Blogs</li>
-            <li className="invisibleDiv">Pricing</li>
+            <li className="invisibleDiv   font-semibold  ">Jobs</li>
+          <li className="invisibleDiv   font-semibold  ">Active employees</li>
+            <li className="invisibleDiv   font-semibold  ">Job Blogs</li>
+            <li className="invisibleDiv   font-semibold  ">Pricing</li>
           </ul>
 
           {/* Buttons */}
